@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DD881A1-6AB7-4200-B890-DF7DB635185C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowThemes.Wpf</RootNamespace>
+    <AssemblyName>WindowThemes.Wpf</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlAssist\BackgroundSwitchElementAssist.cs" />
+    <Compile Include="ControlAssist\BorderElementAssist.cs" />
+    <Compile Include="ControlAssist\ButtonAssist.cs" />
+    <Compile Include="ControlAssist\DatePickerAssist.cs" />
+    <Compile Include="ControlAssist\IconElementAssist.cs" />
+    <Compile Include="ControlAssist\ScrollElementAssist.cs" />
+    <Compile Include="ControlAssist\TextBlockElementAssist.cs.cs" />
+    <Compile Include="ControlAssist\TitleElementAssist.cs" />
+    <Compile Include="ControlAssist\TreeViewAssist.cs" />
+    <Compile Include="Controls\Bubble.cs" />
+    <Compile Include="Controls\CustormPasswordBox.cs" />
+    <Compile Include="Controls\DropDown.cs" />
+    <Compile Include="Controls\DropDownControl.cs" />
+    <Compile Include="Controls\MongolianLayerWindow.xaml.cs">
+      <DependentUpon>MongolianLayerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NotTopMostPopup.cs" />
+    <Compile Include="Controls\PointLoadingControl.cs" />
+    <Compile Include="Controls\PopupBoxButton.cs" />
+    <Compile Include="Controls\ResultMsgWindow.xaml.cs">
+      <DependentUpon>ResultMsgWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScaleHost.cs" />
+    <Compile Include="Controls\SliderControl.xaml.cs">
+      <DependentUpon>SliderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\XamlDisplay.cs" />
+    <Compile Include="Converters\BooleanBackVisibilityConverter.cs" />
+    <Compile Include="Converters\BorderCircularConverter.cs" />
+    <Compile Include="Converters\BrushRoundConverter.cs" />
+    <Compile Include="Converters\BooleanVisibilityConverter.cs" />
+    <Compile Include="Converters\Converters.cs" />
+    <Compile Include="Converters\IsReadOnlyConverter.cs" />
+    <Compile Include="Converters\MathMultipleConverter.cs" />
+    <Compile Include="Converters\NullableToVisibilityConverter.cs" />
+    <Compile Include="Common\Enums.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Controls\MongolianLayerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ResultMsgWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SliderControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\WindowThemes.Wpf.Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\WindowThemes.Wpf.CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\WindowThemes.Wpf.DataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\WindowThemes.Wpf.Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\WindowThemes.Wpf.Scroll.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\WindowThemes.Wpf.TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\WindowThemes.Wpf.TreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

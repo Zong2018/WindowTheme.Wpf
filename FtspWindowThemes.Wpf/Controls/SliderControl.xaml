@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="WindowThemes.Wpf.Controls.SliderControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WindowThemes.Wpf.Controls"
+            xmlns:assist="clr-namespace:WindowThemes.Wpf.ControlAssist"
+            xmlns:control ="clr-namespace:WindowThemes.Wpf.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="800" x:Name="sliderControl">
+    <control:Bubble x:Name="bubble" AnglePosition="BottomRightNotEnd" Padding="0" BorderCornerRadius="4" Background="White" Width="320" Height="200" BorderBrush="#DADADA" CoverBrush="White">
+        <Grid x:Name="grid" Width="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>  
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" x:Name="numTop" />
+            <Slider x:Name="slider" Grid.Row="1" Grid.Column="1" Foreground="#FF999999" BorderThickness="0" Style="{StaticResource ScaleSliderStyle}"
+                    VerticalAlignment="Center" TickPlacement="BottomRight" 
+                    TickFrequency="{Binding ElementName=sliderControl,Path=TickFrequerncy}"
+                    LargeChange="{Binding ElementName=sliderControl,Path=LargeChange}" 
+                    SmallChange="{Binding ElementName=sliderControl,Path=SmallChange}"  
+                    Minimum="{Binding ElementName=sliderControl,Path=MinNum}" 
+                    Maximum="{Binding ElementName=sliderControl,Path=MaxNum}"
+                    ValueChanged="slider_ValueChanged"/>
+            <Grid Grid.Row="2" Grid.Column="1"  x:Name="numBottom" Margin="6,0,6,0" Background="White"/>
+            <Button x:Name="btnDown"  Grid.Column="0" Grid.Row="1"  Width="10" Height="10" Margin="5,0,10,0" VerticalAlignment="Center" VerticalContentAlignment="Center" Style="{DynamicResource IconButtonStyle}" Background="Transparent"
+                            assist:IconElementAssist.Geometry="{DynamicResource PathMin}" 
+                            assist:IconElementAssist.Height="2"  
+                            assist:IconElementAssist.Width="10"
+                            assist:BorderElementAssist.CornerRadius="0" 
+                            assist:IconElementAssist.IconMargin="0,2,0,0" 
+                            assist:IconElementAssist.FillColor="#FF999999" 
+                            assist:BackgroundSwitchElementAssist.MouseHoverBackground="Transparent"
+                            assist:BackgroundSwitchElementAssist.MouseDownBackground="Transparent"
+                            assist:IconElementAssist.MouseHoverForeground="{StaticResource GlobalButtonMouseOverColor}"
+                            assist:IconElementAssist.MouseDownForeground="{StaticResource GlobalButtonPressedColor}"
+                            Click="btnDown_Click"
+                            >
+            </Button>
+            <Button  x:Name="btnUp" Grid.Column="2" Grid.Row="1"  Width="10" Height="10" Margin="10,-5,10,0" VerticalAlignment="Center"  VerticalContentAlignment="Center" Style="{DynamicResource IconButtonStyle}" Background="Transparent"
+                            assist:IconElementAssist.Geometry="{DynamicResource PathAdd}" 
+                            assist:IconElementAssist.Height="10"  
+                            assist:IconElementAssist.Width="10"
+                            assist:BorderElementAssist.CornerRadius="0" 
+                            assist:IconElementAssist.IconMargin="0,0,0,0" 
+                            assist:IconElementAssist.FillColor="#FF999999" 
+                            assist:BackgroundSwitchElementAssist.MouseHoverBackground="Transparent"
+                            assist:BackgroundSwitchElementAssist.MouseDownBackground="Transparent"
+                            assist:IconElementAssist.MouseHoverForeground="{StaticResource GlobalButtonMouseOverColor}"
+                            assist:IconElementAssist.MouseDownForeground="{StaticResource GlobalButtonPressedColor}"
+                            Click="btnUp_Click"
+                            >
+            </Button>
+            <TextBox Grid.Column="3" Grid.Row="1"  Width="20" Height="20" Margin="10,0,0,0"  VerticalAlignment="Center" Visibility="Collapsed"/>
+        </Grid>
+    </control:Bubble>
+
+</UserControl>

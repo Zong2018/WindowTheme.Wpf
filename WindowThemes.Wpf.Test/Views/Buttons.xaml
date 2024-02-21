@@ -1,0 +1,129 @@
+﻿<UserControl x:Class="WindowThemes.Wpf.Test.Views.Buttons"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowThemes.Wpf.Test.Views" xmlns:wpf="http://bobo.com/WindowThemes.Wpf"
+             mc:Ignorable="d"
+        d:DesignHeight="450" d:DesignWidth="1500"> 
+    <!--bobox-->
+    <ScrollViewer x:Name="MainScrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Content="测试" Height="30"  Style="{StaticResource FontButtonStyle}" Foreground="#3399fe" wpf:BackgroundSwitchElementAssist.MouseHoverBackground="#883399fe" wpf:BackgroundSwitchElementAssist.MouseDownBackground="#ee3399fe">
+
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Content="禁用状态按钮" Height="30" IsEnabled="False"  Style="{StaticResource FontButtonStyle}" Foreground="#3399fe" wpf:BackgroundSwitchElementAssist.MouseHoverBackground="#883399fe" wpf:BackgroundSwitchElementAssist.MouseDownBackground="#ee3399fe">
+
+                    </Button>
+                </wpf:XamlDisplay>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Content="测试"  Style="{StaticResource CornerRadiusBlueButtonStyle}" wpf:BorderElementAssist.CornerRadius="10">
+
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Content="测试" Style="{StaticResource CornerRadiusBlueButtonStyle}" Width="40" Height="40" wpf:BorderElementAssist.CornerRadius="20">
+
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Content="测试" IsEnabled="False" Style="{StaticResource CornerRadiusBlueButtonStyle}" Width="40" Height="40" wpf:BorderElementAssist.CornerRadius="20">
+
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Content="测试" Height="30"  Style="{StaticResource WindowThemesButton}" wpf:BorderElementAssist.CornerRadius="8" Foreground="White" wpf:BackgroundSwitchElementAssist.MouseHoverBackground="#883399fe" wpf:BackgroundSwitchElementAssist.MouseDownBackground="#ee3399fe" Background="#3399fe">
+
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Content="测试" Height="30" IsEnabled="False"  Style="{StaticResource WindowThemesButton}" Foreground="White" wpf:BorderElementAssist.CornerRadius="2"  wpf:BackgroundSwitchElementAssist.MouseHoverBackground="GreenYellow" wpf:BackgroundSwitchElementAssist.MouseDownBackground="LawnGreen" Background="Green">
+
+                    </Button>
+                </wpf:XamlDisplay>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Height="40" Width="100" Style="{StaticResource IconButtonStyle}" wpf:IconElementAssist.Geometry="{StaticResource PathDelete}" wpf:IconElementAssist.Height="30"  wpf:IconElementAssist.Width="30" HorizontalContentAlignment="Left" Padding="10,0,30,0" wpf:IconElementAssist.FillColor="#663399fe" wpf:BorderElementAssist.CornerRadius="10" wpf:IconElementAssist.IconMargin="0,5,10,0" Background="#3399fe" wpf:BackgroundSwitchElementAssist.MouseHoverBackground="#883399fe" wpf:BackgroundSwitchElementAssist.MouseDownBackground="#ee3399fe">
+                        测试
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Height="40" Width="100" IsEnabled="False" Foreground="Black" Style="{StaticResource IconButtonStyle}" wpf:IconElementAssist.Geometry="{StaticResource PathDelete}" wpf:IconElementAssist.Height="30"  wpf:IconElementAssist.Width="30" HorizontalContentAlignment="Left" Padding="10,0,30,0" wpf:IconElementAssist.FillColor="Black" wpf:BorderElementAssist.CornerRadius="10" wpf:IconElementAssist.IconMargin="0,5,10,0" Background="#3399fe" wpf:BackgroundSwitchElementAssist.MouseHoverBackground="#883399fe" wpf:BackgroundSwitchElementAssist.MouseDownBackground="#ee3399fe">
+                        测试
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0" >
+                    <Button Height="30" Width="30" Style="{StaticResource IconButtonStyle}" HorizontalContentAlignment="Left" Padding="0" Background="Transparent"
+                            wpf:IconElementAssist.Geometry="{StaticResource PathMin}" 
+                            wpf:IconElementAssist.Height="2"  
+                            wpf:IconElementAssist.Width="20"
+                            wpf:BorderElementAssist.CornerRadius="0" 
+                            wpf:IconElementAssist.IconMargin="0,14,5,0" 
+                            wpf:IconElementAssist.FillColor="#FF999999" 
+                            wpf:BackgroundSwitchElementAssist.MouseHoverBackground="Transparent"
+                            wpf:BackgroundSwitchElementAssist.MouseDownBackground="Transparent"
+                            wpf:IconElementAssist.MouseHoverForeground="{StaticResource GlobalButtonMouseOverColor}"
+                            wpf:IconElementAssist.MouseDownForeground="{StaticResource GlobalButtonPressedColor}"
+                            >
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0" >
+                    <Button Height="30" Width="30" Style="{StaticResource IconButtonStyle}"
+                            wpf:IconElementAssist.Geometry="{StaticResource PathClose}" 
+                            wpf:IconElementAssist.Height="20"  
+                            wpf:IconElementAssist.Width="20"
+                            wpf:BorderElementAssist.CornerRadius="0" 
+                            wpf:IconElementAssist.IconMargin="0,5,5,0" 
+                            wpf:IconElementAssist.FillColor="#FF999999" 
+                            wpf:BackgroundSwitchElementAssist.MouseHoverBackground="Transparent"
+                            wpf:BackgroundSwitchElementAssist.MouseDownBackground="Transparent"
+                            wpf:IconElementAssist.MouseHoverForeground="{StaticResource GlobalButtonMouseOverColor}"
+                            wpf:IconElementAssist.MouseDownForeground="{StaticResource GlobalButtonPressedColor}"
+                            >
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0" >
+                    <Button Height="30" Width="30" Style="{StaticResource IconButtonStyle}" IsEnabled="False"
+                            wpf:IconElementAssist.Geometry="{StaticResource PathClose}" 
+                            wpf:IconElementAssist.Height="20"  
+                            wpf:IconElementAssist.Width="20"
+                            wpf:BorderElementAssist.CornerRadius="0" 
+                            wpf:IconElementAssist.IconMargin="0,5,5,0" 
+                            wpf:IconElementAssist.FillColor="#FF999999" 
+                            wpf:BackgroundSwitchElementAssist.MouseHoverBackground="Transparent"
+                            wpf:BackgroundSwitchElementAssist.MouseDownBackground="Transparent"
+                            wpf:IconElementAssist.MouseHoverForeground="{StaticResource GlobalButtonMouseOverColor}"
+                            wpf:IconElementAssist.MouseDownForeground="{StaticResource GlobalButtonPressedColor}"
+                            >
+                    </Button>
+                </wpf:XamlDisplay>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Height="40" Width="100" Style="{StaticResource PreviewBlueButtonStyle}" wpf:BorderElementAssist.CornerRadius="10" >
+                        Delete
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Height="40" Width="100" Style="{StaticResource PreviewBlueButtonStyle}" wpf:BorderElementAssist.CornerRadius="20" wpf:BackgroundSwitchElementAssist.MouseDownBackground="Yellow" wpf:BackgroundSwitchElementAssist.MouseHoverBackground="LightGoldenrodYellow">
+                        取消
+                    </Button>
+                </wpf:XamlDisplay>
+                <wpf:XamlDisplay Margin="0,0,8,0">
+                    <Button Height="40" Width="100" Style="{StaticResource PreviewBlueButtonStyle}" IsEnabled="False" wpf:BorderElementAssist.CornerRadius="20" wpf:BackgroundSwitchElementAssist.MouseDownBackground="Yellow" wpf:BackgroundSwitchElementAssist.MouseHoverBackground="LightGoldenrodYellow">
+                        禁用状态按钮
+                    </Button>
+                </wpf:XamlDisplay>
+            </StackPanel>
+        </StackPanel>
+      
+
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,493 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:assist="clr-namespace:WindowThemes.Wpf.ControlAssist"
+    xmlns:control ="clr-namespace:WindowThemes.Wpf.Controls"
+    mc:Ignorable="d">
+    
+    <!--全局按钮背景颜色-->
+    <SolidColorBrush x:Key="GlobalButtonBgColor" Color="#FF3399FF"/>
+    <!--全局按钮背景颜色-->
+    <SolidColorBrush x:Key="GlobalButtonBorderBurshColor" Color="#FF3399FF"/>
+    <!--全局按钮鼠标悬浮颜色-->
+    <SolidColorBrush x:Key="GlobalButtonMouseOverColor" Color="#FF5CB3FF"/>
+    <!--全局按钮鼠按下颜色-->
+    <SolidColorBrush x:Key="GlobalButtonPressedColor" Color="#FF2176D9"/>
+    <!--全局按钮鼠按禁止颜色-->
+    <SolidColorBrush x:Key="GlobalButtonLimitColor" Color="#FFE8E8E8"/>
+    <SolidColorBrush x:Key="GlobalButtonForegroundColor" Color="White"/>
+    <SolidColorBrush x:Key="GlobalButtonLimitFontColor" Color="#FF999999"/>
+
+    <!--图标-->
+    <PathFigureCollection x:Key="Path.SearchData">M6.5,2C4.01471853256226,2 2,4.01471853256226 1.99999988079071,6.5 2,8.98528099060059 4.01471853256226,11 6.5,11 8.98528099060059,11 11,8.98528099060059 11,6.5 11,4.01471853256226 8.98528099060059,2 6.5,2z M6.5,1.00000011920929C9.53756618499756,1 12,3.46243381500244 12,6.5 12,7.65749835968018 11.6424360275269,8.73148345947266 11.03173828125,9.61752414703369L13.9562683105469,12.5420551300049C14.3431911468506,12.9289779663086 14.3429946899414,13.5565004348755 13.9497470855713,13.9497470855713 13.5592231750488,14.3402719497681 12.923752784729,14.3379669189453 12.5420551300049,13.9562683105469L9.61752414703369,11.03173828125C8.73148345947266,11.6424360275269 7.65749835968018,12 6.5,12 3.46243381500244,12 1,9.53756618499756 0.999999940395355,6.5 1,3.46243381500244 3.46243381500244,1 6.5,1.00000011920929z</PathFigureCollection>
+    <PathGeometry x:Key="Path.Search" Figures="{StaticResource Path.SearchData}"/>
+    <PathFigureCollection x:Key="PathDeleteData">
+        M512 32C246.4 32 32 246.4 32 512s214.4 480 480 480 480-214.4 480-480S777.6 32 512 32m201.6 681.6c-12.8 12.8-35.2 12.8-48 0L512 560 358.4 713.6c-12.8 12.8-35.2 12.8-48 0-12.8-12.8-12.8-35.2 0-48L464 512 310.4 358.4c-12.8-12.8-12.8-35.2 0-48 12.8-12.8 35.2-12.8 48 0L512 464l153.6-153.6c12.8-12.8 35.2-12.8 48 0 12.8 12.8 12.8 35.2 0 48L560 512l153.6 153.6c16 12.8 16 35.2 0 48m0 0z
+    </PathFigureCollection>
+    <PathGeometry x:Key="PathDelete" Figures="{StaticResource PathDeleteData}"/>
+
+    <PathFigureCollection x:Key="PathCloseData">
+        M952.311 921.329l-409.418-410.41 407.261-408.248c8.53-8.551 8.53-22.416 0-30.967-8.532-8.552-22.36-8.552-30.892 0L511.999 479.952 104.737 71.704c-8.53-8.552-22.362-8.552-30.892 0-8.53 8.552-8.53 22.417 0 30.967L481.107 510.92 71.687 921.33c-8.529 8.551-8.529 22.416 0 30.967a21.755 21.755 0 0 0 15.448 6.413c5.59 0 11.181-2.139 15.446-6.413L512 541.886l409.419 410.41a21.755 21.755 0 0 0 15.446 6.413c5.592 0 11.18-2.139 15.447-6.413 8.53-8.55 8.53-22.417 0-30.967z
+    </PathFigureCollection>
+    <PathGeometry x:Key="PathClose" Figures="{StaticResource PathCloseData}"/>
+
+    <PathFigureCollection x:Key="PathMinData">
+        M78.633918 396.690788l858.20393 0 0 158.309562-858.20393 0 0-158.309562Z
+    </PathFigureCollection>
+    <PathGeometry x:Key="PathMin" Figures="{StaticResource PathMinData}"/>
+
+    <PathFigureCollection x:Key="PathAddData">
+        M928.16 552.704H552.704v375.456h-68.256V552.672H108.96V484.48l375.488-0.064V108.96h68.256V484.48h375.456z
+    </PathFigureCollection>
+    <PathGeometry x:Key="PathAdd" Figures="{StaticResource PathAddData}"/>
+    
+    <PathFigureCollection x:Key="PathMaxData">
+        M959.72 0H294.216a63.96 63.96 0 0 0-63.96 63.96v127.92H64.28A63.96 63.96 0 0 0 0.32 255.84V959.4a63.96 63.96 0 0 0 63.96 63.96h703.56a63.96 63.96 0 0 0 63.96-63.96V792.465h127.92a63.96 63.96 0 0 0 63.96-63.96V63.96A63.96 63.96 0 0 0 959.72 0zM767.84 728.505V959.4H64.28V255.84h703.56z m189.322 0H831.8V255.84a63.96 63.96 0 0 0-63.96-63.96H294.216V63.96H959.72z
+    </PathFigureCollection>
+    <PathGeometry x:Key="PathMax" Figures="{StaticResource PathMaxData}"/>
+
+    <PathFigureCollection x:Key="PathNormalData">
+        M774 200c27.6 0 50 22.4 50 50v524c0 27.6-22.4 50-50 50H250c-27.6 0-50-22.4-50-50V250c0-27.6 22.4-50 50-50h524m0-72H250c-16.4 0-32.4 3.2-47.5 9.6-14.5 6.1-27.6 14.9-38.8 26.1-11.2 11.2-20 24.2-26.1 38.8-6.4 15.1-9.6 31.1-9.6 47.5v524c0 16.4 3.2 32.4 9.6 47.5 6.1 14.5 14.9 27.6 26.1 38.8 11.2 11.2 24.2 20 38.8 26.1 15.1 6.4 31.1 9.6 47.5 9.6h524c16.4 0 32.4-3.2 47.5-9.6 14.5-6.1 27.6-14.9 38.8-26.1 11.2-11.2 20-24.2 26.1-38.8 6.4-15.1 9.6-31.1 9.6-47.5V250c0-16.4-3.2-32.4-9.6-47.5-6.1-14.5-14.9-27.6-26.1-38.8-11.2-11.2-24.2-20-38.8-26.1-15.1-6.4-31.1-9.6-47.5-9.6z
+    </PathFigureCollection>
+    <PathGeometry x:Key="PathNormal" Figures="{StaticResource PathNormalData}"/>
+
+    <!--图标-->
+         
+ <Style x:Key="WindowThemesButton" TargetType="{x:Type ButtonBase}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="{DynamicResource GlobalButtonBgColor}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource GlobalButtonBgColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource GlobalButtonForegroundColor}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="TextBlock.FontWeight" Value="Normal"/>
+        <Setter Property="TextBlock.FontSize" Value="12"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Height" Value="28" />
+        <Setter Property="Width" Value="80" />
+        <Setter Property="assist:BackgroundSwitchElementAssist.MouseHoverBackground" Value="{StaticResource GlobalButtonMouseOverColor}"/>
+        <Setter Property="assist:BackgroundSwitchElementAssist.MouseDownBackground" Value="{StaticResource GlobalButtonPressedColor}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Grid>
+                        <Border x:Name="border" Width="{Binding Path=ActualWidth, ElementName=innerBorder}" Height="{Binding Path=ActualHeight, ElementName=innerBorder}"  BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" CornerRadius="{Binding Path=(assist:BorderElementAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}">
+                        </Border>
+                        <Border x:Name="innerBorder"  BorderThickness="0" SnapsToDevicePixels="True" CornerRadius="{Binding Path=(assist:BorderElementAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}">
+                            <ContentPresenter x:Name="contentPresenter" TextBlock.Foreground="{TemplateBinding Foreground}"  ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Background" TargetName="innerBorder"  Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseHoverBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <!--<Setter Property="BorderBrush" TargetName="innerBorder" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseHoverBackground), RelativeSource={RelativeSource TemplatedParent}}"/>-->
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Foreground"  Value="White"/>
+                            <Setter Property="Background" TargetName="innerBorder"  Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseDownBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <!--<Setter Property="BorderBrush" TargetName="border" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseDownBackground), RelativeSource={RelativeSource TemplatedParent}}"/>-->
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{StaticResource GlobalButtonLimitFontColor}"/>
+                            <Setter Property="TextBlock.Foreground" TargetName="contentPresenter" Value="{StaticResource GlobalButtonLimitFontColor}"/>
+                            <Setter Property="Background" TargetName="border"  Value="{StaticResource GlobalButtonLimitColor}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GlobalButtonLimitColor}"/>
+                            <Setter Property="Background" TargetName="innerBorder"  Value="{StaticResource GlobalButtonLimitColor}"/>
+                            <Setter Property="BorderThickness" TargetName="innerBorder" Value="1"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        
+    </Style>
+
+    <Style x:Key="CornerRadiusBlueButtonStyle" TargetType="{x:Type ButtonBase}" BasedOn="{StaticResource WindowThemesButton}">
+        <Style.Setters>
+            <Setter Property="assist:BorderElementAssist.CornerRadius" Value="2"/>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="FontButtonStyle" TargetType="{x:Type Button}">
+        <Style.Setters>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border Background="{TemplateBinding Background}" x:Name="border">
+                            </Border>
+                            <TextBlock x:Name="text" Text="{TemplateBinding Content}" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Microsoft YaHei"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="{x:Null}"></Setter>
+                                <Setter Property="Foreground" TargetName="text" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseHoverBackground), RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="{x:Null}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="border" Value="{x:Null}"></Setter>
+                                <Setter Property="Foreground" TargetName="text" Value="#FF999999"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="{x:Null}"></Setter>
+                                <Setter Property="Foreground" TargetName="text" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseDownBackground), RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="BlueFontButtonStyle"  TargetType="{x:Type Button}" BasedOn="{StaticResource FontButtonStyle}">
+        <Style.Setters>
+            <Setter Property="assist:BackgroundSwitchElementAssist.MouseHoverBackground" Value="{StaticResource GlobalButtonMouseOverColor}"/>
+            <Setter Property="assist:BackgroundSwitchElementAssist.MouseDownBackground" Value="{StaticResource GlobalButtonPressedColor}"/>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="ExTextButtonStyle" TargetType="{x:Type Button}">
+        <Style.Setters>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+            <Setter Property="Background" Value="#FF3399FF"/>
+            <Setter Property="Foreground" Value="{DynamicResource GlobalButtonForegroundColor}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate  TargetType="{x:Type Button}">
+                        <Grid Background="Transparent">
+
+                            <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" CornerRadius="{Binding Path=(assist:BorderElementAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}">
+                                <ContentPresenter x:Name="contentPresenter" TextBlock.Foreground="{TemplateBinding Foreground}"  ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Border>
+                            <control:PointLoadingControl x:Name="loading" Visibility="Hidden" Diam="3" PointColor="White" ExText="{Binding Path=(assist:ButtonAssist.ExContentText),  RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                            <Border x:Name="borderCover" Background="#22FFFFFF" Visibility="Hidden"/>
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Button.IsDefaulted" Value="True">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Visibility" TargetName="borderCover" Value="Visible"/>
+                                <!--<Setter Property="Visibility" TargetName="loading" Value="Visible"/>
+                                <Setter Property="Visibility" TargetName="contentPresenter" Value="Collapsed"/>-->
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource GlobalButtonPressedColor}"/>
+                                <!--<Setter Property="Visibility" TargetName="borderCover" Value="Visible"/>-->
+                            </Trigger>
+                            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource GlobalButtonLimitColor}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                                <Setter Property="Foreground" Value="{StaticResource GlobalButtonLimitFontColor}"/>
+                                <Setter Property="TextBlock.Foreground" TargetName="contentPresenter" Value="{StaticResource GlobalButtonLimitFontColor}"/>
+                            </Trigger>
+                            <Trigger Property="assist:ButtonAssist.IsShowExText" Value="True">
+                                <Setter TargetName="loading" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="contentPresenter" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="BorderThicknessButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,0,0"/>
+        <Setter Property="Width" Value="80"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="BorderBrush" Value="#FF3399FF"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="#FF3399FF"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Background="Transparent">
+                        <Border x:Name="border" CornerRadius="{Binding Path=(assist:BorderElementAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="Transparent">
+                        </Border>
+                        <TextBlock x:Name="text" Foreground="{TemplateBinding Foreground}" Text="{TemplateBinding Content}" FontSize="{TemplateBinding FontSize}" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Microsoft YaHei"  />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True"/>
+                        <Trigger Property="IsDefaulted" Value="True"/>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseHoverBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter Property="Foreground" TargetName="text" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseHoverBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" TargetName="text" Value="{StaticResource GlobalButtonLimitFontColor}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GlobalButtonLimitColor}"/>
+                        </Trigger>
+                        <MultiTrigger >
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsPressed" Value="True"/>
+                                <Condition Property="IsFocused" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Foreground" TargetName="text" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseDownBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseDownBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PreviewBlueButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BorderThicknessButtonStyle}">
+        <Style.Setters>
+            <Setter Property="assist:BorderElementAssist.CornerRadius" Value="2"/>
+            <Setter Property="assist:BackgroundSwitchElementAssist.MouseHoverBackground" Value="{StaticResource GlobalButtonMouseOverColor}"/>
+            <Setter Property="assist:BackgroundSwitchElementAssist.MouseDownBackground" Value="{StaticResource GlobalButtonPressedColor}"/>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="IconButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="assist:BackgroundSwitchElementAssist.MouseHoverBackground" Value="{StaticResource GlobalButtonMouseOverColor}"/>
+        <Setter Property="assist:BackgroundSwitchElementAssist.MouseDownBackground" Value="{StaticResource GlobalButtonPressedColor}"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource GlobalButtonBgColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource GlobalButtonForegroundColor}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="TextBlock.FontWeight" Value="Medium"/>
+        <Setter Property="TextBlock.FontSize" Value="14"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Height" Value="28" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Grid>
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" CornerRadius="{Binding Path=(assist:BorderElementAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}">
+                        </Border>
+                        <Border x:Name="innerBorder"  BorderThickness="{Binding ElementName=border,Path=BorderThickness}" SnapsToDevicePixels="True" CornerRadius="{Binding Path=(assist:BorderElementAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}">
+                            <Grid>
+                                <Border VerticalAlignment="Top" HorizontalAlignment="Right" Margin="{Binding Path=(assist:IconElementAssist.IconMargin), RelativeSource={RelativeSource TemplatedParent}}" Width="{Binding Path=(assist:IconElementAssist.Width), RelativeSource={RelativeSource TemplatedParent}}" Height="{Binding Path=(assist:IconElementAssist.Height), RelativeSource={RelativeSource TemplatedParent}}">
+                                    <Path x:Name="icon" Stretch="Fill"  Stroke="{Binding Path=(assist:IconElementAssist.FillColor), RelativeSource={RelativeSource TemplatedParent}}"  Fill="{Binding Path=(assist:IconElementAssist.FillColor), RelativeSource={RelativeSource TemplatedParent}}" Data="{Binding RelativeSource={RelativeSource TemplatedParent},Path= (assist:IconElementAssist.Geometry)}"/>
+                                </Border>
+                                <ContentPresenter x:Name="contentPresenter" TextBlock.Foreground="{TemplateBinding Foreground}"  ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Stroke" TargetName="icon"
+                                    Value="{Binding Path=(assist:IconElementAssist.MouseHoverForeground), RelativeSource={RelativeSource TemplatedParent}}"
+                                    
+                                    />
+                            <Setter Property="Fill" TargetName="icon"
+                                       Value="{Binding Path=(assist:IconElementAssist.MouseHoverForeground), RelativeSource={RelativeSource TemplatedParent}}"
+                                    
+                                    />
+                            <Setter Property="Background" TargetName="innerBorder"  Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseHoverBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter Property="BorderBrush" TargetName="innerBorder" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseHoverBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Stroke" TargetName="icon"
+                                    Value="{Binding Path=(assist:IconElementAssist.MouseDownForeground), RelativeSource={RelativeSource TemplatedParent}}"
+                                    
+                                    />
+                            <Setter Property="Fill" TargetName="icon"
+                                       Value="{Binding Path=(assist:IconElementAssist.MouseDownForeground), RelativeSource={RelativeSource TemplatedParent}}"
+                                    
+                                    />
+                            <Setter Property="Background" TargetName="innerBorder"  Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseDownBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter Property="BorderBrush" TargetName="innerBorder" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseDownBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{StaticResource GlobalButtonLimitFontColor}"/>
+                            <Setter Property="TextBlock.Foreground" TargetName="contentPresenter" Value="{StaticResource GlobalButtonLimitFontColor}"/>
+                            <Setter Property="Background" TargetName="innerBorder"  Value="{StaticResource GlobalButtonLimitColor}"/>
+                            <Setter Property="BorderBrush" TargetName="innerBorder" Value="{StaticResource GlobalButtonLimitColor}"/>
+                            <Setter Property="Background" TargetName="border"  Value="{StaticResource GlobalButtonLimitColor}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GlobalButtonLimitColor}"/>
+                            <Setter Property="Fill" TargetName="icon"
+                                       Value="{StaticResource GlobalButtonLimitFontColor}"
+                                    
+                                    />
+                            <Setter Property="Stroke" TargetName="icon"
+                                       Value="{StaticResource GlobalButtonLimitFontColor}"
+                                    
+                                    />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="ThemeButtonToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="IsTabStop" Value="false"/>
+        <Setter Property="Focusable" Value="false"/>
+        <Setter Property="ClickMode" Value="Press"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid>
+                        <Border x:Name="templateRoot" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="4">
+                            <Border x:Name="splitBorder" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="{Binding Path=(assist:IconElementAssist.IconMargin), RelativeSource={RelativeSource TemplatedParent}}" Width="{Binding Path=(assist:IconElementAssist.Width), RelativeSource={RelativeSource TemplatedParent}}" Height="{Binding Path=(assist:IconElementAssist.Height), RelativeSource={RelativeSource TemplatedParent}}">
+                                <Path  Stretch="Fill"  Stroke="{Binding Path=(assist:IconElementAssist.FillColor), RelativeSource={RelativeSource TemplatedParent}}"  Fill="{Binding Path=(assist:IconElementAssist.FillColor), RelativeSource={RelativeSource TemplatedParent}}" Data="{Binding RelativeSource={RelativeSource TemplatedParent},Path= (assist:IconElementAssist.Geometry)}"/>
+                            </Border>
+                        </Border>
+                        <Border x:Name="borderCover" Background="#99FFFFFF" Visibility="Hidden"/>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
+                                <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="false"/>
+                                <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="false"/>
+                                <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="true"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{StaticResource ComboBox.Static.Editable.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ComboBox.Static.Editable.Border}"/>
+                            <Setter Property="Background" TargetName="splitBorder" Value="{StaticResource ComboBox.Static.Editable.Button.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource ComboBox.Static.Editable.Button.Border}"/>
+                        </MultiDataTrigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FF3F9BEE"/>
+                        </Trigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="false"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Visibility" TargetName="borderCover" Value="Collapsed"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Visibility" TargetName="borderCover" Value="Visible"/>
+                        </MultiDataTrigger>
+                        <Trigger Property="IsPressed" Value="true">
+                        </Trigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="true"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="false"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{StaticResource ComboBox.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ComboBox.Pressed.Border}"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="true"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{StaticResource ComboBox.Pressed.Editable.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ComboBox.Pressed.Editable.Border}"/>
+                            <Setter Property="Background" TargetName="splitBorder" Value="{StaticResource ComboBox.Pressed.Editable.Button.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource ComboBox.Pressed.Editable.Button.Border}"/>
+                        </MultiDataTrigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                        </Trigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="false"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="#FFE8E8E8"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FFE8E8E8"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{StaticResource ComboBox.Disabled.Editable.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ComboBox.Disabled.Editable.Border}"/>
+                            <Setter Property="Background" TargetName="splitBorder" Value="{StaticResource ComboBox.Disabled.Editable.Button.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource ComboBox.Disabled.Editable.Button.Border}"/>
+                        </MultiDataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ToggleThemeButton" TargetType="{x:Type ButtonBase}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="{DynamicResource GlobalButtonBgColor}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource GlobalButtonBgColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource GlobalButtonForegroundColor}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="TextBlock.FontWeight" Value="Normal"/>
+        <Setter Property="TextBlock.FontSize" Value="12"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Height" Value="28" />
+        <Setter Property="Width" Value="80" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Grid>
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" CornerRadius="{Binding Path=(assist:BorderElementAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}">
+                        </Border>
+                        <Border x:Name="innerBorder"  BorderThickness="{Binding ElementName=border,Path=BorderThickness}" SnapsToDevicePixels="True" CornerRadius="{Binding Path=(assist:BorderElementAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}">
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <Popup x:Name="PART_Popup" AllowsTransparency="true" IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom" >
+                            <Border x:Name="dropDownBorder" BorderBrush="#FFE8E8E8" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" CornerRadius="4" >
+                                <ListView>
+                                    
+                                </ListView>
+                            </Border>
+                        </Popup>
+                        <ToggleButton x:Name="toggleButton" Command="{x:Static ApplicationCommands.Open}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}"  IsChecked="{Binding Is, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ThemeComboBoxToggleButton}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Background" TargetName="innerBorder"  Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseHoverBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter Property="BorderBrush" TargetName="innerBorder" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseHoverBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Foreground"  Value="White"/>
+                            <Setter Property="Background" TargetName="innerBorder"  Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseDownBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter Property="BorderBrush" TargetName="innerBorder" Value="{Binding Path=(assist:BackgroundSwitchElementAssist.MouseDownBackground), RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{StaticResource GlobalButtonLimitFontColor}"/>
+                            <Setter Property="Background" TargetName="innerBorder"  Value="{StaticResource GlobalButtonLimitColor}"/>
+                            <Setter Property="BorderBrush" TargetName="innerBorder" Value="{StaticResource GlobalButtonLimitColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+</ResourceDictionary>

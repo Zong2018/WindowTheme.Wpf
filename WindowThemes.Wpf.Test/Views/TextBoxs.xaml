@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="WindowThemes.Wpf.Test.Views.TextBoxs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WindowThemes.Wpf.Test.Views" xmlns:wpf="http://bobo.com/WindowThemes.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1000">
+    <Grid>
+        <ScrollViewer x:Name="MainScrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <wpf:XamlDisplay Margin="0,0,8,0">
+                        <TextBox Height="30" Style="{DynamicResource TextBoxBaseStyle}" Width="200" Foreground="#FF666666" wpf:BorderElementAssist.Text="测试">
+
+                        </TextBox>
+                    </wpf:XamlDisplay>
+                    <wpf:XamlDisplay Margin="0,0,8,0">
+                        <TextBox Height="30" Style="{DynamicResource TextBoxBaseStyle}" Width="200" Foreground="#FF666666" 
+                                 wpf:BorderElementAssist.Text="测试"
+                                 wpf:TextBlockElementAssist.Foreground="#0985d9" 
+                                 wpf:BorderElementAssist.CornerRadius="15" 
+                                 wpf:TextBlockElementAssist.Margin="25,0,0,0"
+                                 wpf:BackgroundSwitchElementAssist.MouseHoverBackground="#880985d9"
+                                 wpf:BackgroundSwitchElementAssist.MouseDownBackground="#ee0985d9"
+                                 BorderBrush="#0985d9"
+                                 Padding="10,0,10,0">
+
+                        </TextBox>
+                    </wpf:XamlDisplay>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <wpf:XamlDisplay Margin="0,0,8,0">
+                        <TextBox Height="30" Style="{DynamicResource TitleTextBoxBaseStyle}" Width="220" Foreground="#FF666666" 
+                                 wpf:BorderElementAssist.Text="测试"
+                                 wpf:TitleElementAssist.Title="测试："
+                                 >
+
+                        </TextBox>
+                    </wpf:XamlDisplay>
+                    <wpf:XamlDisplay Margin="0,0,8,0">
+                        <TextBox Height="60" Style="{DynamicResource TitleTextBoxBaseStyle}" wpf:TitleElementAssist.TitlePlacement="Top" Width="200" Foreground="#FF666666"
+                                 wpf:BorderElementAssist.Text="测试"
+                                   wpf:TitleElementAssist.Title="测试："
+                                 >
+
+                        </TextBox>
+                    </wpf:XamlDisplay>
+                </StackPanel>
+            </StackPanel>
+
+
+        </ScrollViewer>
+    </Grid>
+</UserControl>

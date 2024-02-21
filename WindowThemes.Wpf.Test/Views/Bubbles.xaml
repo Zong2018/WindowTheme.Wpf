@@ -1,0 +1,105 @@
+﻿<UserControl x:Class="WindowThemes.Wpf.Test.Views.Bubbles"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WindowThemes.Wpf.Test.Views" xmlns:wpf="http://bobo.com/WindowThemes.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1200">
+    <Grid>
+        <ScrollViewer x:Name="MainScrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <wpf:XamlDisplay Margin="0,0,8,0">
+                        <wpf:Bubble  Width="100" Height="50">
+                            测试
+                        </wpf:Bubble>
+                    </wpf:XamlDisplay>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <wpf:XamlDisplay Margin="0,0,8,0" MouseEnter="bubble_MouseEnter">
+                        <wpf:Bubble x:Name="bubble" AnglePosition="BottomCenter" Padding="0" BorderCornerRadius="3">
+                            <Grid MinWidth="200" MinHeight="100" MaxWidth="250">
+                                <TextBlock Text="测试" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20"/>
+                                <Button VerticalAlignment="Top" HorizontalAlignment="Right" wpf:IconElementAssist.Geometry="{DynamicResource PathClose}"  Style="{DynamicResource IconButtonStyle}" Height="10" Width="10" wpf:IconElementAssist.Height="10" wpf:IconElementAssist.Width="10" wpf:IconElementAssist.FillColor="White"  Margin="0,5,5,0" Click="bubbleBtn_Click"
+                                        wpf:BackgroundSwitchElementAssist.MouseHoverBackground="Transparent"
+                                        wpf:BackgroundSwitchElementAssist.MouseDownBackground="Transparent"
+                                        wpf:IconElementAssist.MouseHoverForeground="#6F999999"
+                                        wpf:IconElementAssist.MouseDownForeground="#FF999999"
+                                        />
+                            </Grid>
+                        </wpf:Bubble>
+                    </wpf:XamlDisplay>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <wpf:XamlDisplay Margin="0,0,8,0">
+                        <wpf:Bubble Content="测试！" Foreground="GreenYellow" AnglePosition="BottomRight" Padding="5,5,0,5" BorderCornerRadius="2"/>
+                    </wpf:XamlDisplay>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <wpf:XamlDisplay Margin="0,0,8,0">
+                        <wpf:SliderControl IsShowNum="True" TickFrequerncy="2.5" LargeChange="1" SmallChange="0.25" MinNum="0" MaxNum="15"/>
+                    </wpf:XamlDisplay>
+                    <wpf:XamlDisplay Margin="250,0,8,0" VerticalAlignment="Bottom">
+                        <wpf:DropDownControl HorizontalAlignment="Center" 
+                                  Height="25"
+                                  Placement="Top"
+                                  HorizontalOffset="-280"
+                                  VerticalOffset="0"
+                         >
+                            <wpf:DropDownControl.Content>
+                                <Grid  Height="25">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="5,0,5,0" HorizontalAlignment="Center">
+                                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,5,0"
+                                            Width="13" 
+                                            Height="13">
+                                            <Path x:Name="iconOne1" Stretch="Fill"  Stroke="#FF666666" 
+                                              Fill="#FF666666" Data="M531.523147 277.56055l-39.065737 0 0 214.868719L277.589714 492.429269l0 39.065737 214.867696 0 0 214.868719 39.065737 0L531.523147 531.495006l195.333804 0 0-39.065737L531.523147 492.429269 531.523147 277.56055zM835.531046 200.190415c-83.378989-86.449931-195.371666-135.131677-315.41367-137.381927l-8.335852-0.037862c-243.233744 0-444.728874 197.814298-449.136254 441.026552C58.14477 751.514025 256.034792 956.651103 503.806899 961.191512l8.296967 0.037862c243.25114 0 444.804598-197.890023 449.248817-441.026552C963.527209 400.159796 918.872173 286.488897 835.531046 200.190415zM929.135934 519.515161C924.976194 745.332233 737.864656 928.991136 512.103866 928.991136l-7.744381-0.113587c-229.974765-4.118807-413.691997-194.532555-409.456532-424.430572 4.081968-225.77921 191.099363-409.438113 416.878572-409.438113l7.742335 0.075725c111.458511 1.944282 215.383442 47.267537 292.734134 127.500882C889.647571 302.742069 931.118078 408.229588 929.135934 519.515161z"/>
+
+                                        </Grid>
+                                        <TextBlock x:Name="tbTipNum1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="#FF666666" Text="{Binding ElementName=slider1,Path=TipNum,UpdateSourceTrigger=PropertyChanged}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </wpf:DropDownControl.Content>
+                            <wpf:DropDownControl.Child>
+                                <Grid 
+                          Width="330">
+                                    <wpf:SliderControl x:Name="slider1" ValueChanged="slider1_ValueChanged" IsShowNum="True" TickFrequerncy="2.5" LargeChange="1" SmallChange="0.25" MinNum="0" MaxNum="15"/>
+                                </Grid>
+                            </wpf:DropDownControl.Child>
+                        </wpf:DropDownControl>
+                    </wpf:XamlDisplay>
+                </StackPanel>
+
+                <!--<StackPanel Orientation="Horizontal" Margin="0,200,0,0" Visibility="Collapsed">
+                    <wpf:XamlDisplay>
+                        <wpf:DropDown HorizontalAlignment="Center" DropDownPlacement="RightTop"
+                                  Height="25"
+                         >
+                            <wpf:DropDown.Content>
+                                <Grid  Height="25">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="5,0,5,0" HorizontalAlignment="Center">
+                                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,5,0"
+                                            Width="13" 
+                                            Height="13">
+                                            <Path x:Name="iconOne" Stretch="Fill"  Stroke="#FF666666" 
+                                              Fill="#FF666666" Data="M531.523147 277.56055l-39.065737 0 0 214.868719L277.589714 492.429269l0 39.065737 214.867696 0 0 214.868719 39.065737 0L531.523147 531.495006l195.333804 0 0-39.065737L531.523147 492.429269 531.523147 277.56055zM835.531046 200.190415c-83.378989-86.449931-195.371666-135.131677-315.41367-137.381927l-8.335852-0.037862c-243.233744 0-444.728874 197.814298-449.136254 441.026552C58.14477 751.514025 256.034792 956.651103 503.806899 961.191512l8.296967 0.037862c243.25114 0 444.804598-197.890023 449.248817-441.026552C963.527209 400.159796 918.872173 286.488897 835.531046 200.190415zM929.135934 519.515161C924.976194 745.332233 737.864656 928.991136 512.103866 928.991136l-7.744381-0.113587c-229.974765-4.118807-413.691997-194.532555-409.456532-424.430572 4.081968-225.77921 191.099363-409.438113 416.878572-409.438113l7.742335 0.075725c111.458511 1.944282 215.383442 47.267537 292.734134 127.500882C889.647571 302.742069 931.118078 408.229588 929.135934 519.515161z"/>
+
+                                        </Grid>
+                                        <TextBlock x:Name="tbTipNum" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="#FF666666" Text="{Binding ElementName=slider,Path=TipNum,UpdateSourceTrigger=PropertyChanged}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </wpf:DropDown.Content>
+                            <wpf:DropDown.Child>
+                                <Grid 
+                          Width="320">
+                                    <wpf:SliderControl x:Name="slider" IsShowNum="True" TickFrequerncy="2.5" LargeChange="1" SmallChange="0.25" MinNum="0" MaxNum="15"/>
+                                </Grid>
+                            </wpf:DropDown.Child>
+                        </wpf:DropDown>
+                    </wpf:XamlDisplay>
+                </StackPanel>-->
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
