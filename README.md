@@ -1,8 +1,10 @@
 基于WPF开发的样式库
 使用步骤
 1.引用样式库WindowThemes.Wpf.dll
-2.在App.xaml中添加<ResourceDictionary Source="pack://application:,,,/WindowThemes.Wpf;component/Themes/Generic.xaml"/>
-3.在对应控件的xaml中使用自定义控件需要添加命名控件 xmlns:wpf ="http://bobo.com/WindowThemes.Wpf"
+2.在App.xaml中添加
+<ResourceDictionary Source="pack://application:,,,/WindowThemes.Wpf;component/Themes/Generic.xaml"/>
+3.在对应控件的xaml中使用自定义控件需要添加命名空间 
+xmlns:wpf ="http://bobo.com/WindowThemes.Wpf"
 
 效果展示
 
